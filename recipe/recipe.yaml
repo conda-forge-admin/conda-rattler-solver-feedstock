@@ -1,5 +1,5 @@
 context:
-  version: "0.2.0"
+  version: "26.10.1"
 
 package:
   name: conda-rattler-solver
@@ -7,14 +7,12 @@ package:
 
 source:
   url: https://github.com/conda/conda-rattler-solver/archive/${{ version }}.tar.gz
-  sha256: 3276b7a8cd63dfa64822c75e99e318b10f7e5a02ffb6c26cf5ab7db2b470562e
-  patches:
-    - 0000-relax-py-rattler.patch
+  sha256: 0098248f5c6d4ad7e31ac0ae5376b97e161f7ef2db240e21f4c467283ec7c134
 
 build:
   noarch: python
   script: SETUPTOOLS_SCM_PRETEND_VERSION="${{ version }}" python -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -25,7 +23,7 @@ requirements:
   run:
     - python >=${{ python_min }}
     - conda >=26.7.0
-    - py-rattler >=0.26.0,<0.28.0a0
+    - py-rattler >=0.28.1,<0.29.0a0
 
 tests:
   - python:
@@ -40,7 +38,7 @@ tests:
 
 about:
   homepage: https://github.com/conda/conda-rattler-solver
-  summary: 'The fast pixi solver, now in conda'
+  summary: 'The fast, Rust-based solver for conda'
   license: BSD-3-Clause
   license_file: LICENSE
 
