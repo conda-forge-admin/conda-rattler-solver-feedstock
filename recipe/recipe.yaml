@@ -8,8 +8,6 @@ package:
 source:
   url: https://github.com/conda/conda-rattler-solver/archive/${{ version }}.tar.gz
   sha256: 0098248f5c6d4ad7e31ac0ae5376b97e161f7ef2db240e21f4c467283ec7c134
-  patches:
-    - 0000-relax-py-rattler.patch
 
 build:
   noarch: python
@@ -25,7 +23,7 @@ requirements:
   run:
     - python >=${{ python_min }}
     - conda >=26.7.0
-    - py-rattler >=0.26.0,<0.28.0a0
+    - py-rattler >=0.28.1,<0.29.0a0
 
 tests:
   - python:
@@ -40,7 +38,7 @@ tests:
 
 about:
   homepage: https://github.com/conda/conda-rattler-solver
-  summary: 'The fast pixi solver, now in conda'
+  summary: 'The fast, Rust-based solver for conda'
   license: BSD-3-Clause
   license_file: LICENSE
 
