@@ -1,5 +1,5 @@
 context:
-  version: "26.10.1"
+  version: "26.10.2"
 
 package:
   name: conda-rattler-solver
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/conda/conda-rattler-solver/archive/${{ version }}.tar.gz
-  sha256: 0098248f5c6d4ad7e31ac0ae5376b97e161f7ef2db240e21f4c467283ec7c134
+  sha256: d867afc4a9662855a14ececde71e9e2a79ae1a9870711ea7223e80ce5fdd525c
 
 build:
   noarch: python
